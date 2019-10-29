@@ -18,7 +18,7 @@
     <link rel="alternative" href="/atom.xml" title="干脆面生产工厂" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="http://jiemogancuimian.com/pictures/avatar/icon.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -42,7 +42,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="http://jiemogancuimian.com/pictures/avatar/alitouxiang.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">芥末干脆面</a></h1>
@@ -80,8 +80,6 @@
 		        
 					<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/09eb427442f0" title="jianshu"><i class="icon-jianshu"></i></a>
 		        
-					<a class="mail" target="_blank" href="/718138559@outlook.com" title="mail"><i class="icon-mail"></i></a>
-		        
 			</div>
 		</nav>
 	</header>		
@@ -98,7 +96,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="http://jiemogancuimian.com/pictures/avatar/alitouxiang.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">芥末干脆面</h1>
@@ -118,8 +116,6 @@
 						<a class="github" target="_blank" href="https://github.com/VoidMainR" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/09eb427442f0" title="jianshu"><i class="icon-jianshu"></i></a>
-			        
-						<a class="mail" target="_blank" href="/718138559@outlook.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -146,6 +142,94 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-关于虚拟网卡影响服务启动地址解决" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/29/%E5%85%B3%E4%BA%8E%E8%99%9A%E6%8B%9F%E7%BD%91%E5%8D%A1%E5%BD%B1%E5%93%8D%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E5%9C%B0%E5%9D%80%E8%A7%A3%E5%86%B3/">关于虚拟网卡影响服务启动地址解决</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/29/%E5%85%B3%E4%BA%8E%E8%99%9A%E6%8B%9F%E7%BD%91%E5%8D%A1%E5%BD%B1%E5%93%8D%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E5%9C%B0%E5%9D%80%E8%A7%A3%E5%86%B3/" class="archive-article-date">
+  	<time datetime="2019-10-29T05:45:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>此问题出现于windows 本地测试时</strong></p>
+<p>#问题症状<br>微服务注册成功，但是无法访问到相应的微服务。查看consul注册服务信息发现注册的服务地址非内网地址。（这个问题太蠢了，出了两次）</p>
+<p>#解决方案<br>禁用虚拟网卡或提高网络的优先级（跃点减少）</p>
+<ol>
+<li>简单粗暴解决法<br>在控制面板-&gt;网络连接中找到虚拟网卡直接禁用</li>
+</ol>
+<p><strong>优点：</strong> 简单粗暴，立刻可用<br><strong>缺点：</strong> 虚拟网卡将无法使用，例如docker的创建的虚拟网卡禁用后会导致docker内服务无法访问</p>
+<ol start="2">
+<li>设置优先级<br>在控制面板-&gt;网络连接中找到当前使用的网络-&gt;属性-&gt;IPV4-&gt;属性-&gt;高级<br>取消选中自动跃点，将接口跃点数填一个比较小的值(比如:10),将虚拟网卡跃点数同样设置为大于当前网络的跃点数</li>
+</ol>
+<p><strong>优点：</strong> 虚拟网卡也能正常使用<br><strong>缺点：</strong> 需要重启应用配置</p>
+<blockquote>
+<p>当出现这种情况的时候有一种简单的方法来看是否是多个网卡造成的问题：  </p>
+</blockquote>
+<p>在powershell中ipconfig查看本地适配器信息，正常来说你当前使用的网络（外网）的排序如果在你的虚拟网卡排序下面，就很有可能是跃点问题了</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">踩坑记录</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/29/%E5%85%B3%E4%BA%8E%E8%99%9A%E6%8B%9F%E7%BD%91%E5%8D%A1%E5%BD%B1%E5%93%8D%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E5%9C%B0%E5%9D%80%E8%A7%A3%E5%86%B3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-干脆面工厂建成了！" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -176,6 +260,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -241,7 +336,7 @@
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -301,6 +396,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">踩坑记录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -351,27 +454,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="http://jiemogancuimian.com/tools/WK.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>百度文库DOC工具</a>
             </li>
           
         </ul>
@@ -382,7 +465,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">咸鱼一只，感谢支持</div>
   	  	
     	</section>
     
