@@ -6,16 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.jiemogancuimian.com">
-  <title>Archives: 2019 | 干脆面生产工厂</title>
+  <title>为Emmylua添加UnityAPI代码提示 | 干脆面生产工厂</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hexo,travis CI">
-<meta property="og:type" content="website">
-<meta property="og:title" content="干脆面生产工厂">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.jiemogancuimian.com&#x2F;archives&#x2F;2019&#x2F;index.html">
+  <meta name="description" content="&amp;emsp;最近从之前的cocos creator前端开始转做unity前端，刚刚接触公司的项目。在环境搭建中遇到一些问题在此记录一下   &amp;emsp;我接到的项目不算复杂，Lua开发使用了IDEA系列编辑器(之前些golang的时候也用的他们家的GoLand)，插件使用了Emmylua。关于Emmylua的使用心得随后我会再写一篇文章来记录，暂时理解不太深不适合此时来介绍。家常唠完了，进正题叭。">
+<meta name="keywords" content="unity,Emmylua">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为Emmylua添加UnityAPI代码提示">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.jiemogancuimian.com&#x2F;2019&#x2F;11&#x2F;07&#x2F;%E4%B8%BAEmmylua%E6%B7%BB%E5%8A%A0UnityAPI%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA&#x2F;index.html">
 <meta property="og:site_name" content="干脆面生产工厂">
-<meta property="og:description" content="hexo,travis CI">
+<meta property="og:description" content="&amp;emsp;最近从之前的cocos creator前端开始转做unity前端，刚刚接触公司的项目。在环境搭建中遇到一些问题在此记录一下   &amp;emsp;我接到的项目不算复杂，Lua开发使用了IDEA系列编辑器(之前些golang的时候也用的他们家的GoLand)，插件使用了Emmylua。关于Emmylua的使用心得随后我会再写一篇文章来记录，暂时理解不太深不适合此时来介绍。家常唠完了，进正题叭。">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;jiemogancuimian.com&#x2F;pictures&#x2F;blogs&#x2F;2019-11-07&#x2F;01.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;jiemogancuimian.com&#x2F;pictures&#x2F;blogs&#x2F;2019-11-07&#x2F;02.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;jiemogancuimian.com&#x2F;pictures&#x2F;blogs&#x2F;2019-11-07&#x2F;03.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;jiemogancuimian.com&#x2F;pictures&#x2F;blogs&#x2F;2019-11-07&#x2F;04.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;jiemogancuimian.com&#x2F;pictures&#x2F;blogs&#x2F;2019-11-07&#x2F;04.png">
+<meta property="og:updated_time" content="2019-11-07T03:49:49.389Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;jiemogancuimian.com&#x2F;pictures&#x2F;blogs&#x2F;2019-11-07&#x2F;01.png">
   
     <link rel="alternative" href="/atom.xml" title="干脆面生产工厂" type="application/atom+xml">
   
@@ -143,36 +151,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-为Emmylua添加UnityAPI代码提示" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/07/%E4%B8%BAEmmylua%E6%B7%BB%E5%8A%A0UnityAPI%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA/" class="archive-article-date">
-  	<time datetime="2019-11-07T10:11:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/07/%E4%B8%BAEmmylua%E6%B7%BB%E5%8A%A0UnityAPI%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA/">为Emmylua添加UnityAPI代码提示</a>
+    <h1 class="article-title" itemprop="name">
+      为Emmylua添加UnityAPI代码提示
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/11/07/%E4%B8%BAEmmylua%E6%B7%BB%E5%8A%A0UnityAPI%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA/" class="archive-article-date">
+  	<time datetime="2019-11-07T10:11:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&emsp;最近从之前的cocos creator前端开始转做unity前端，刚刚接触公司的项目。在环境搭建中遇到一些问题在此记录一下  </p>
+<p>&emsp;我接到的项目不算复杂，Lua开发使用了IDEA系列编辑器(之前些golang的时候也用的他们家的GoLand)，插件使用了Emmylua。关于Emmylua的使用心得随后我会再写一篇文章来记录，暂时理解不太深不适合此时来介绍。家常唠完了，进正题叭。  </p>
+<p>&emsp;关于EmmyLua插件的安装我就不在赘述了，毕竟IDEA家的插件安装直接搜索and安装就ok了。这里主要说一下UnityAPI的代码提示问题。毕竟对于我这样的新手玩家来说，像lua这种脚本语言没有强类型的情况下想通过”.”来查看类型有哪些方法是很难受的，而且也不利于学习的过程。所以我就去网上找添加UnityAPI提示的方法，然而找到了如下的添加方法:<br><img src="http://jiemogancuimian.com/pictures/blogs/2019-11-07/01.png" alt="image"><br><a href=""https://www.cnblogs.com/sanyejun/p/9673198.html"">截图博客源地址</a>  </p>
+<p>&emsp;然而我发现现在的编辑器里并没有<strong>Lua Net Library</strong>这个选项<br><img src="http://jiemogancuimian.com/pictures/blogs/2019-11-07/02.png" alt="image"></p>
+<p>&emsp;后来我从EmmyLua的<a href="https://github.com/EmmyLua" target="_blank" rel="noopener">github项目</a>上顺藤摸瓜加到官方群里，在群里找到了答案  </p>
+<p>&emsp;首先需要为IDEA编辑器添加EmmyLua-Unity插件，这个插件在官方的插件库里是没有，要去群里或者<a href="https://ci.appveyor.com/project/EmmyLua/emmylua-unity/build/artifacts" target="_blank" rel="noopener">这个地址</a>去下载，然后通过本地安装插件的方法安装到编辑器(直接选中zip包就行，不用解压操作)：<br><img src="http://jiemogancuimian.com/pictures/blogs/2019-11-07/03.png" alt="image">  </p>
+<p>&emsp;安装完之后点<em>ok</em>会提示你重启编辑器，重启即可，然后再去添加的时候就会看到有<strong>Lua Net Library</strong>这个选项了<br><img src="http://jiemogancuimian.com/pictures/blogs/2019-11-07/04.png" alt="image">  </p>
+<p>&emsp;但是在群里发现这种添加dll的方法被标记了一个过时，并提供了一种新的添加UnityAPI提示的方法:<br>&emsp;在安装了上面的IDEA插件后，将一个<a href="https://github.com/EmmyLua/EmmyLua-Unity/blob/master/Unity/Assets/Editor/EmmyLuaService.cs" target="_blank" rel="noopener"">EmmyLuaService.cs</a>的文件(<a href="https://pan.baidu.com/s/16d9hhkwUi67BB4naJHuxKQ" target="_blank" rel="noopener"">提取码: wgi9</a>)放到Unity项目的<strong>Assets/Editor</strong>文件夹下，如果没有的话可以自己创建一个Editor文件夹，之后Unity编辑器菜单栏上会多出一个EmmyLua的菜单项，选中Enable  </p>
+<p><img src="http://jiemogancuimian.com/pictures/blogs/2019-11-07/04.png" alt="image">  </p>
+<p>&emsp;然后就会发现在IDEA编辑器中已经有UnityAPI的代码提示了。由于这种方法相当于是在Unity编辑器中启动了一个server，所以需要在Unity编辑器打开的情况下才能有提示，不过考虑到正常开发中Unity编辑器是常驻打开的也没什么问题。</p>
+<p>&emsp;其实群内还有很多工具和小技巧，而且还能跟大家交流学习，如果有需要不妨也加入官方群，方便更好的学习</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -188,133 +205,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.jiemogancuimian.com/2019/11/07/%E4%B8%BAEmmylua%E6%B7%BB%E5%8A%A0UnityAPI%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/29/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8Hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2CI%E8%B0%83%E6%95%B4/" class="archive-article-date">
-  	<time datetime="2019-10-29T16:03:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/29/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8Hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2CI%E8%B0%83%E6%95%B4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于使用Hexo创建个人博客CI调整</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/29/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8Hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2CI%E8%B0%83%E6%95%B4/">关于使用Hexo创建个人博客CI调整</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">踩坑记录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/29/%E5%85%B3%E4%BA%8E%E8%99%9A%E6%8B%9F%E7%BD%91%E5%8D%A1%E5%BD%B1%E5%93%8D%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E5%9C%B0%E5%9D%80%E8%A7%A3%E5%86%B3/" class="archive-article-date">
-  	<time datetime="2019-10-29T13:45:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/29/%E5%85%B3%E4%BA%8E%E8%99%9A%E6%8B%9F%E7%BD%91%E5%8D%A1%E5%BD%B1%E5%93%8D%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E5%9C%B0%E5%9D%80%E8%A7%A3%E5%86%B3/">关于虚拟网卡影响服务启动地址解决</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">踩坑记录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/29/%E5%B9%B2%E8%84%86%E9%9D%A2%E5%B7%A5%E5%8E%82%E5%BB%BA%E6%88%90%E4%BA%86%EF%BC%81/" class="archive-article-date">
-  	<time datetime="2019-10-29T10:57:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/29/%E5%B9%B2%E8%84%86%E9%9D%A2%E5%B7%A5%E5%8E%82%E5%BB%BA%E6%88%90%E4%BA%86%EF%BC%81/">干脆面工厂建成了！</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -337,8 +327,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
